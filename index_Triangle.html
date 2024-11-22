@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/style_Triangle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <span class="menu">
+    <section class="sidebar">
+      <div class="row">
+        <div class="col-4">
+          <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#list-item-1" 
+            id="list-item-1">Triangle</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-2"
+            id="list-item-2">Item 2</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-3"
+            id="list-item-3">Item 3</a>
+            <a class="list-group-item list-group-item-action" href="#list-item-4"
+            id="list-item-4">Item 4</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="main_conten">
+      <nav class="navbar bg-body-tertiary">
+        <form class="container-fluid justify-content-start">
+          <button class="btn btn-outline-success me-2" type="button" 
+          onclick="navbutton(3)" id="navbutton_3">3 row</button>
+          <button class="btn btn-outline-success me-2" type="button"
+          onclick="navbutton(2)" id="navbutton_2">2 row</button>
+          <button class="btn btn-outline-success me-2" type="button"
+          onclick="navbutton(1)" id="navbutton_1">1 row</button>
+        </form>
+      </nav>
+
+      <main class="mainAll_Block_contenT" id="main_triangle">
+
+        <div class="block_conten_triangle" id="block0">
+          <select class="form-select form-select-sm" id="select_functionT0" onchange="Show_conten_triangle(0)">
+            <option selected>Open this select menu</option>
+            <option value="SinCosTan">sin,cos,tan</option>
+            <option value="InverseTrig">InverseTrig</option>
+          </select>
+
+          <div class="conten_triangle" id="sin_cos_tan0" style="display: block;">
+            <h5>sin,cos,tan</h5>
+
+            <label>เลือก : </label><select id="id_select_type0">
+              <option>---</option>
+              <option value="sin">Sin</option>
+              <option value="cos">Cos</option>
+              <option value="tan">Tan</option>
+            </select>
+
+            <select id="id_select_angle0">
+              <option>---</option>
+              <option value="true">degree</option>
+              <option value="false">radian</option>
+            </select>
+
+            <input type="number" id="id_input0" class="input_T"><br>
+            <label>result : </label><label id="id_output0" class="result_T">---</label><br>
+
+            <p class="btn_Block">
+              <input type="button" id="_button0" value="คํานวณ" 
+              class = "btn_process"onclick="Sin_Cos_Tan(degreeToRadian(0),0)">
+              <input type="button" value="Add Node" class="btn_Ad_Re" onclick="add_main_triangle()">
+              <input type="button" value="remove Node" id="S_remove_node0" 
+              class="btn_Ad_Re" onclick="remove_main_triangle(0)">
+            </p>
+
+          </div>
+
+          <div class="conten_triangle" id="InverseTrig0" style="display: none;">
+            <h5>InverseTrig</h5>
+            <label>เลือก : </label><select id="id_select_type_IT0">
+              <option>---</option>
+              <option value="arcsin">arcSin</option>
+              <option value="arccos">arcCos</option>
+              <option value="arctan">arcTan</option>
+            </select>
+
+            <select>
+              <option>degree</option>
+            </select>
+
+            <input type="number" id="id_input_IT0" class="input_T"><br>
+            <label>result : </label><label id="id_output_IT0" class="result_T">---</label><br>
+          
+            <p class="btn_Block">
+              <input type="button" id="button_IT0" value="คํานวณ" 
+              class = "btn_process" onclick="InverseTrig(0)">
+              <input type="button" value="Add Node" class="btn_Ad_Re" onclick="add_main_triangle()">
+              <input type="button" value="remove Node" id="I_remove_node0" 
+              class="btn_Ad_Re" onclick="remove_main_triangle(0)">
+            </p>
+          </div>
+        </div>
+      </main>
+
+        <!----------- ดอกเบื้ยทบต้น(compound interest) -------------->
+
+        <main class="main_CI">
+
+        </main>
+    </main>
+  </span>
+
+
+
+  <script src="/script_Triangle.js"></script>
+  <script src="/scriptCSS_Triangle.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
